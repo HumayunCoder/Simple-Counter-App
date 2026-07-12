@@ -5,7 +5,7 @@ A modern and interactive Counter Application built using **HTML**, **Tailwind CS
 ---
 
 ## Preview
-![Counter App Screenshot](./assets/screenshot.png)
+![Counter App Screenshot]([./assets/screenshot.png](https://github.com/HumayunCoder/Simple-Counter-App/blob/main/assets/Screenshot.png))
 
 ---
 
