@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Cherry+Cream+Soda&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumar+One+Outline&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg-black text-white w-[100vw] h-[100vh] flex flex-col" id="maindiv">
+        <div class="flex justify-center pt-[20px]">
+            <div class="pr-[10px]">
+                <button class="cursor-pointer" onclick="info()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-8 h-8 fill-white">
+                        <path
+                            d="M436.41-276.41h87.18V-520h-87.18v243.59ZM480-595.22q19.03 0 31.91-12.87 12.87-12.88 12.87-31.91t-12.87-31.91q-12.88-12.87-31.91-12.87t-31.91 12.87q-12.87 12.88-12.87 31.91t12.87 31.91q12.88 12.87 31.91 12.87Zm0 523.35q-84.91 0-159.34-32.12-74.44-32.12-129.5-87.17-55.05-55.06-87.17-129.5Q71.87-395.09 71.87-480t32.12-159.34q32.12-74.44 87.17-129.5 55.06-55.05 129.5-87.17 74.43-32.12 159.34-32.12t159.34 32.12q74.44 32.12 129.5 87.17 55.05 55.06 87.17 129.5 32.12 74.43 32.12 159.34t-32.12 159.34q-32.12 74.44-87.17 129.5-55.06 55.05-129.5 87.17Q564.91-71.87 480-71.87Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="pr-[10px]">
+                <button class="cursor-pointer" onclick="design()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-8 h-8 fill-white">
+                        <path
+                            d="m387.69-100-15.23-121.85q-16.07-5.38-32.96-15.07-16.88-9.7-30.19-20.77L196.46-210l-92.3-160 97.61-73.77q-1.38-8.92-1.96-17.92-.58-9-.58-17.93 0-8.53.58-17.34t1.96-19.27L104.16-590l92.3-159.23 112.46 47.31q14.47-11.46 30.89-20.96t32.27-15.27L387.69-860h184.62l15.23 122.23q18 6.54 32.57 15.27 14.58 8.73 29.43 20.58l114-47.31L855.84-590l-99.15 74.92q2.15 9.69 2.35 18.12.19 8.42.19 16.96 0 8.15-.39 16.58-.38 8.42-2.76 19.27L854.46-370l-92.31 160-112.61-48.08q-14.85 11.85-30.31 20.96-15.46 9.12-31.69 14.89L572.31-100H387.69Zm92.77-260q49.92 0 84.96-35.04 35.04-35.04 35.04-84.96 0-49.92-35.04-84.96Q530.38-600 480.46-600q-50.54 0-85.27 35.04T360.46-480q0 49.92 34.73 84.96Q429.92-360 480.46-360Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <button class="cursor-pointer" onclick="resetCounter()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-8 h-8 fill-white">
+                        <path
+                            d="M479.04-151.87q-137.11 0-232.62-95.51-95.51-95.51-95.51-232.62t95.51-232.62q95.51-95.51 232.62-95.51 71.16 0 135.71 29.22 64.55 29.21 110.51 83.89v-113.11h83.83v291.72H517.13V-600H683.7q-32-54.57-86.43-85.85-54.42-31.28-118.23-31.28-98.8 0-167.96 69.16Q241.91-578.8 241.91-480t69.17 167.97q69.16 69.16 167.96 69.16 75.57 0 136.73-43.28T702.17-400h95.24q-28.24 109.35-116.63 178.74-88.39 69.39-201.74 69.39Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="flex justify-between items-center h-screen px-[20px]">
+            <div>
+                <button onclick="decrement()" id="negative"
+                    class="w-14 h-14 rounded-full  border border-white text-2xl flex items-center justify-center cursor-pointer hidden">
+                    -
+                </button>
+            </div>
+            <div>
+                <p id="count" class=" text-[300px]">0</p>
+            </div>
+            <div>
+                <button onclick="increment()"
+                    class="cursor-pointer w-14 h-14 rounded-full border border-white text-2xl flex items-center justify-center">
+                    +
+                </button>
+            </div>
+        </div>
+        <div>
+            <p class="text-[20px] flex justify-center mb-[20px] hidden" id="limit">-Limit Reached-</p>
+        </div>
+    </div>
+    <div id="reseter" class="bg-black fixed inset-0 text-white flex justify-center items-center flex-col hidden">
+        <p id="setre" class="resetcounter text-4xl pb-8">Reset Counter?</p>
+        <button onclick="counterreset()"
+            class="px-13 py-4 rounded-2xl text-3xl mb-5 cursor-pointer hover:border hover:border-white font-[inter] font-normal">Yes</button>
+        <button
+            class="text-center px-7 py-4 rounded-2xl text-3xl cursor-pointer hover:border hover:border-white font-[inter] font-normal"
+            onclick="backtomain()">Cancel</button>
+    </div>
+    <div id="reseterr" class="bg-black fixed inset-0 text-white flex justify-center items-center flex-col hidden">
+        <div class="w-[270px] h-[100px] border border-white flex justify-center items-center rounded-[10px] mb-[20px]">
+            <label class="font-bold text-[20px]">
+                Set Count =
+                <input type="number" value="0" onchange="setcounter(value)" id="setcounter"
+                    class="font-bold w-20 ml-2 px-2 text-black border border-white rounded bg-white">
+            </label>
+        </div>
+
+        <div
+            class="w-[270px] h-[150px] border border-white flex flex-col justify-center items-center rounded-[10px] mb-[20px]">
+            <label class="flex items-center gap-3 cursor-pointer text-white mb-[15px]">
+                <span id="spane" class="font-bold text-[20px]">Limits Off / On</span>
+
+                <input type="checkbox" class="sr-only peer" id="switch" onchange="switchh()">
+
+                <div class="relative w-16 h-8 rounded-full bg-black border border-white
+                after:content-['']
+                after:absolute
+                after:left-1
+                after:top-1/2
+                after:-translate-y-1/2
+                after:w-6
+                after:h-6
+                after:bg-white
+                after:rounded-full
+                after:transition-transform
+                after:duration-300
+                peer-checked:after:translate-x-8
+                peer-checked:after:-translate-y-1/2">
+                </div>
+            </label>
+            <label class="font-bold text-[20px] hidden" id="maximum">
+                Maximum =
+                <input type="number" value="0" onchange="setmax(value)"
+                    class="font-bold w-20 ml-2 px-2 text-black border border-white rounded bg-white">
+            </label>
+        </div>
+        <div class=" w-[270px] h-[250px] grid gap-3 grid-cols-3 p-[20px] border border-white rounded-[10px] mb-[20px]">
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-white rounded-[8px] cursor-pointer" onclick="white()">
+            </div>
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl cursor-pointer border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-black rounded-[8px]" onclick="black()">
+            </div>
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl cursor-pointer border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-red-500 rounded-[8px]" onclick="red()">
+            </div>
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl cursor-pointer border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-yellow-300 rounded-[8px]" onclick="yellow()">
+            </div>
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl cursor-pointer border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-green-400 rounded-[8px]" onclick="green()">
+            </div>
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl cursor-pointer border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-blue-600 rounded-[8px]" onclick="blue()">
+            </div>
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl cursor-pointer border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-purple-600 rounded-[8px]" onclick="purple()">
+            </div>
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl cursor-pointer border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-sky-950 rounded-[8px]" onclick="sky()">
+            </div>
+            <div
+                class="w-[65px] h-[60px] transition duration-300 hover:scale-110 hover:shadow-xl cursor-pointer border border-white shadow-[0_0_12px_rgba(255,255,255,0.5)] bg-gray-700 rounded-[8px]" onclick="grey()">
+            </div>
+        </div>
+        <button
+            class="text-center px-7 py-4 rounded-2xl text-3xl cursor-pointer hover:border hover:border-white font-[inter] font-normal"
+            onclick="backtomain()">Cancel</button>
+    </div>
+
+    <div id="info" class="fixed inset-0 bg-black flex flex-col justify-center items-center text-white hidden z-50">
+
+        <h1 class="text-5xl font-bold mb-3">Counter App</h1>
+
+        <p class="text-gray-400 text-lg mb-10">
+            A simple and elegant counter application.
+        </p>
+
+        <div class="w-[420px] border border-white rounded-2xl p-8 mb-[20px]">
+
+            <div class="flex justify-between py-3 border-b border-gray-700">
+                <span class="text-gray-400">Version</span>
+                <span class="font-semibold">1.0</span>
+            </div>
+
+            <div class="flex justify-between py-3 border-b border-gray-700">
+                <span class="text-gray-400">Developer</span>
+                <span class="font-semibold">Muhammad Humayun</span>
+            </div>
+
+            <div class="flex justify-between items-center py-3">
+                <span class="text-gray-400">Built With</span>
+                <span id="spa" class="font-semibold text-white">
+                    HTML • Tailwind • JavaScript
+                </span>
+            </div>
+
+        </div>
+
+        <button onclick="closeInfo()"
+            class="text-center px-7 py-4 rounded-2xl text-3xl cursor-pointer hover:border hover:border-white font-[inter] font-normal">
+            Cancel
+        </button>
+
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>
