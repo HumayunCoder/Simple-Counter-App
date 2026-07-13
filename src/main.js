@@ -12,7 +12,7 @@ function increment() {
   let isChecked = document.getElementById("switch").checked;
   if (counter > c && isChecked) {
     counter = c;
-    limit.classList.add("hidden");
+    limit.classList.remove("hidden");
     count.innerText = c;
   } else if (counter < c) {
     limit.classList.add("hidden");
